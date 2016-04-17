@@ -1,6 +1,14 @@
 class WelcomeController < ApplicationController
   def index
   end
+  
+  def about
+  end
+  
+  def blog
+  end
+
+
 
 def redirect
   client = Signet::OAuth2::Client.new({

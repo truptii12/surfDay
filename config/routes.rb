@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   
   root "welcome#index"
   get "about" => "welcome#about", as: :about
-  get "contact" => "welcome#contact", as: :contact
+  get "blog" => "welcome#blog", as: :blog
   
   
    # the :provider variable allows us to support different providers
