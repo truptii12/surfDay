@@ -1,7 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'forecast_io'
-gem 'figaro'
+
 
 gem 'azure_mgmt_storage'
 gem 'azure_mgmt_compute'
