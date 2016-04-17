@@ -5,11 +5,13 @@ Rails.application.routes.draw do
 
   get 'sessions/create'
 
-  get 'welcome/index'
+  #get 'welcome/index'
   
   root "welcome#index"
-
-
+  get "about" => "welcome#about", as: :about
+  get "contact" => "welcome#contact", as: :contact
+  
+  
    # the :provider variable allows us to support different providers
    # (e.g. twitter, facebook, google, etc.)
    # otherwise we could have written ’auth/twitter/callback’ if we want

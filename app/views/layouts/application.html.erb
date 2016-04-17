@@ -8,7 +8,7 @@
 </head>
 <body>
 
-<%= yield %>
+
 
 <% flash.each do |name, msg| -%>
          <%= content_tag :div, msg, class: name %>
@@ -23,5 +23,8 @@
      <%= link_to "Sign in with google", "/auth/google_oauth2" %>
      <% end %>
      
+     <%= render 'shared/navbar' %>
+     
+     <%= yield %>
 </body>
 </html>
