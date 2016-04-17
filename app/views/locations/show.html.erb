@@ -23,6 +23,9 @@
   <strong>Longitude:</strong>
   <%= @location.longitude %>
 </p>
+<div>
+<%= link_to 'Find the temperature by clicking here', new_forecast_path %>
+  </div>
 
 <%= link_to 'Edit', edit_location_path(@location) %> |
 <%= link_to 'Back', locations_path %>

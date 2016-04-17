@@ -1,7 +1,7 @@
 <p id="notice"><%= notice %></p>
-
-<p> The weather is <%= @weather.currently.temperature %> </p>
-
+<pre>
+<p> The temprerature in the given region is <%= @weather.currently.temperature %> Fahrenheit</p>
+</pre>
 
 
 <p>
@@ -14,5 +14,10 @@
   <%= @forecast.lng %>
 </p>
 
+<div>
+  <p>Before you hit the sea shore, watch this video to beaware of the consequences:-</p>
+
+<iframe width="560" height="315" src="//www.youtube.com/embed/2ji02dSx1nM" frameborder="0" allowfullscreen></iframe>
+  </div>
 <%= link_to 'Edit', edit_forecast_path(@forecast) %> |
 <%= link_to 'Back', forecasts_path %>

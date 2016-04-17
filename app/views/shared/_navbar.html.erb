@@ -14,11 +14,19 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
-        <li><%= link_to "Sign in with google", "/auth/google_oauth2" %></li>
-        <li><%= link_to "Sign in with Twitter", "/auth/twitter" %></li>
+        
+        <% if current_user %>
+         <li>  Signed in as <%= current_user.name %></li>
+        <li><%= link_to "Sign out", signout_path %></li>
         <li class="<%= yield(:index) %>"><%= link_to "Home", root_path %></li> 
         <li class="<%= yield(:about) %>"><%= link_to "about", about_path %></li>
         <li class="<%= yield(:blog) %>"><%= link_to "blog", blog_path %></li>
+        
+        <% else %>
+        <li><%= link_to "Sign in with google", "/auth/google_oauth2" %></li>
+        <li><%= link_to "Sign in with Twitter", "/auth/twitter" %></li>
+        <% end %>
+        
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
