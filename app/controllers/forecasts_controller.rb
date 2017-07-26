@@ -11,7 +11,7 @@ class ForecastsController < ApplicationController
   # GET /forecasts/1.json
 def show       
   @weather = @forecast.get_weather      
-  @current_weather = @weather.currently  
+  #@current_weather = @weather.currently  
 end
 
   # GET /forecasts/new
@@ -71,6 +71,6 @@ end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def forecast_params
-      params.require(:forecast).permit(:lat, :lng)
+      params.require(:forecast).permit(:lat, :lng, :city)
     end
 end

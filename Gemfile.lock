@@ -111,6 +111,8 @@ GEM
     hashie (3.4.3)
     http-cookie (1.0.2)
       domain_name (~> 0.5)
+    httparty (0.15.6)
+      multi_xml (>= 0.5.2)
     httpclient (2.7.1)
     hurley (0.2)
     i18n (0.7.0)
@@ -179,6 +181,8 @@ GEM
     omniauth-twitter (1.2.1)
       json (~> 1.3)
       omniauth-oauth (~> 1.1)
+    open-weather (0.12.0)
+      json (~> 1)
     orm_adapter (0.5.0)
     os (0.9.6)
     pg (0.17.1)
@@ -284,11 +288,13 @@ DEPENDENCIES
   forecast_io
   geocoder
   google-api-client (~> 0.9)
+  httparty
   jbuilder (~> 2.0)
   jquery-rails
   omniauth-facebook
   omniauth-google-oauth2
   omniauth-twitter
+  open-weather
   pg (= 0.17.1)
   rails (= 4.2.0)
   rails_12factor (= 0.0.2)
@@ -301,4 +307,4 @@ DEPENDENCIES
   web-console (~> 2.0)
 
 BUNDLED WITH
-   1.11.2
+   1.14.4
