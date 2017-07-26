@@ -9,16 +9,21 @@ def get_weather
 response = HTTParty.get('http://api.openweathermap.org/data/2.5/forecast/daily?q='+city+'&APPID=a496f6cc9d256a3b5bcae251b1aae713')
    # @humidity= response['main']['humidity']
    # @humidity = response['humidity'] ? response['humidity'] : nil
-    puts response.inspect
+    #puts response.body
     #puts @humidity.inspect
-    #self.weather = response
+    puts @forecast
+    
+    body = JSON.parse(response.body)
+    @city = body["city"]
+    @weather=body["list"]
+    #puts self.weather.inspect
     #body = JSON.parse(response.)
-    list= ret.parsed_response["lists"]
-    list.each do |item|
-        puts item["day"]
-        puts item["min"]
-        puts item["max"]
-    end
+    #list= response.JSON["lists"]
+    #list.each do |item|
+     #   puts item["day"]
+     #   puts item["min"]
+     #   puts item["max"]
+    #end
     #@humidity = body["humidity"]
     #puts @humidity.inspect
     

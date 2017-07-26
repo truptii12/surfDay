@@ -10,7 +10,7 @@ class ForecastsController < ApplicationController
   # GET /forecasts/1
   # GET /forecasts/1.json
 def show       
-  @weather = @forecast.get_weather      
+  @forecast.weather = @forecast.get_weather      
   #@current_weather = @weather.currently  
 end
 

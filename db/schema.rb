@@ -11,7 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170725163657) do
+ActiveRecord::Schema.define(version: 20170726153555) do
+
+  create_table "cities", force: :cascade do |t|
+    t.string   "name"
+    t.integer  "location_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  add_index "cities", ["location_id"], name: "index_cities_on_location_id"
 
   create_table "forecasts", force: :cascade do |t|
     t.float    "lat"
@@ -20,7 +29,10 @@ ActiveRecord::Schema.define(version: 20170725163657) do
     t.datetime "updated_at", null: false
     t.string   "city"
     t.string   "weather"
+    t.integer  "cities_id"
   end
+
+  add_index "forecasts", ["cities_id"], name: "index_forecasts_on_cities_id"
 
   create_table "locations", force: :cascade do |t|
     t.string   "address"
