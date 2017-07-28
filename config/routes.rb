@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  resources :weathers
+
+  resources :temps
+
+  resources :lists
+
   resources :cities
 
   resources :forecasts
